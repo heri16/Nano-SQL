@@ -4,10 +4,10 @@ import { DataModel } from "../index";
  * Handles Level DB storage.
  *
  * @export
- * @class _LevelStore
+ * @class LevelStore
  * @implements {NanoSQLStorageAdapter}
  */
-export declare class _LevelStore implements NanoSQLStorageAdapter {
+export declare class LevelStore implements NanoSQLStorageAdapter {
     path: string | ((dbID: string, tableName: string) => {
         lvld: any;
         args: any;

@@ -24,11 +24,11 @@ const deleteFolderRecursive = (path) => {
  * Handles Level DB storage.
  *
  * @export
- * @class _LevelStore
+ * @class LevelStore
  * @implements {NanoSQLStorageAdapter}
  */
 // tslint:disable-next-line
-export class _LevelStore implements NanoSQLStorageAdapter {
+export class LevelStore implements NanoSQLStorageAdapter {
 
     private _pkKey: {
         [tableName: string]: string;

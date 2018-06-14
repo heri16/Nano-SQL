@@ -7,7 +7,7 @@ import { _IndexedDBStore } from "./adapter-indexedDB";
 import { _WebSQLStore } from "./adapter-websql";
 import { setFast } from "lie-ts";
 /* NODE-START */
-import { _LevelStore } from "./adapter-levelDB";
+import { LevelStore } from "./adapter-levelDB";
 import { DatabaseIndex } from "./db-idx";
 /* NODE-END */
 const queue = require("queue");
@@ -481,7 +481,7 @@ export class _NanoSQLStorage {
                     break;
                 /* NODE-START */
                 case "LVL":
-                    this.adapters[0].adapter = new _LevelStore(args.dbPath, args.writeCache, args.readCache);
+                    this.adapters[0].adapter = new LevelStore(args.dbPath, args.writeCache, args.readCache);
                     break;
                 /* NODE-END */
                 case "TEMP":
